@@ -1,10 +1,18 @@
 package jcpdev.day01.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import jcpdev.day01.service.MemberService;
 import jcpdev.dto.Member;
 
+@Component
 public class MemberController {
+	@Autowired
 	private MemberService service;
+	
+	public MemberController() {		//@Autowired 하려면 기본생성자가 필요합니다.
+	}
 
 	public MemberController(MemberService service) {
 		//생성자에서 의존관계 주입
