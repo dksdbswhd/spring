@@ -1,5 +1,8 @@
 package jcpdev.day01.dao;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class BoardDao {		//db 작업
 	private String dbFactory;	
 	
