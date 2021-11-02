@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 아래의 bean들은 생성자로 의존관계 bean을 주입합니다. 커스텀생성자가 정의되어있어야 합니다. -->
+	<bean class="day01.MemberController" id="memberController">
+		<constructor-arg ref="memberServiceYourImpl"/> <!-- memberServiceMyImpl 로 바꾸면 MyImpl로 바뀜 -->
+	</bean>
+
+	<bean class="day01.MemberServiceMyImpl" id="memberServiceMyImpl">
+		<constructor-arg ref="memberDaoImpl"/>
+	</bean>
+
+	<bean class="day01.MemberServiceYourImpl" id="memberServiceYourImpl">
+		<constructor-arg ref="memberDaoImpl"/>
+	</bean>
+	
+	<bean class="day01.MemberDaoImpl" id="memberDaoImpl">
+		<constructor-arg value="MemberDao 메세지 보냅니다."/>
+	</bean>
+	
+</beans>

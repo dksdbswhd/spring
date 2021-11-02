@@ -19,8 +19,8 @@
 	<bean class="day01.BoardDao" id="boardDao">
 		<property name="dbFactory" value="마이바티스"/>	<!-- 문자열 설정 -->
 	</bean>
-	
-	<bean class="day01.Singer" id="singer">
+	<!-- scope 기본값은 singleton -->
+	<bean class="day01.Singer" id="singer" scope="prototype">	<!-- scope 빼면 싱글턴 -->
 		<property name="idx" value="12"/>
 		<property name="singer" value="트와이스"/>
 		<property name="albums">
