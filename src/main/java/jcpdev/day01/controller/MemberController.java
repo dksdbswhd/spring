@@ -11,8 +11,6 @@ public class MemberController {
 	@Autowired
 	private MemberService service;
 	
-	public MemberController() {		//@Autowired 하려면 기본생성자가 필요합니다.
-	}
 
 	public MemberController(MemberService service) {
 		//생성자에서 의존관계 주입

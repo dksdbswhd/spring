@@ -8,7 +8,6 @@ import jcpdev.dto.Member;
 public class MemberDaoImpl implements MemberDao {
 	
 	public MemberDaoImpl() {	//@Autowired 하려면 기본생성자가 필요합니다.
-		
 	}
 	
 	public MemberDaoImpl(String message) {
