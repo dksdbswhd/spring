@@ -1,12 +1,15 @@
 package jcpdev.day01.service;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import jcpdev.day01.dao.MemberDao;
 import jcpdev.dto.Member;
 
-//@Component
+@Component
 public class MemberServiceYourImpl implements MemberService{
-//	@Autowired
+	@Autowired
 	private MemberDao dao;
 	
 	public MemberServiceYourImpl() {

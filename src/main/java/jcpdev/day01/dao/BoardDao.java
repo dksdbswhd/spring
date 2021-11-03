@@ -8,6 +8,8 @@ public class BoardDao {		//db 작업
 	@Value("마이바티스")
 	private String dbFactory;	
 	
+	//기본생성자 동작
+	
 	public void setDbFactory(String dbFactory) {  //bean설정에서 property 지정하려면 setter 메소드가 있어야합니다.
 		this.dbFactory = dbFactory;
 	}
