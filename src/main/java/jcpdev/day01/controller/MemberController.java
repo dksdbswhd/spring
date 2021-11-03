@@ -10,7 +10,7 @@ import jcpdev.dto.Member;
 @Component
 public class MemberController {
 	@Autowired
-	@Qualifier(value="memberServiceMyImpl")	//첫글짜는 소문자로
+	@Qualifier(value="memberServiceYourImpl")	//첫글짜는 소문자로
 	private MemberService service;
 	
 	public MemberController() { //기본생성자
